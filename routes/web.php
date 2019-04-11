@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('user/login', function () {
+    return view('user.login');
+});

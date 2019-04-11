@@ -2,7 +2,132 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fddc058-8034-4323-8a7c-69ec6c4ca5c4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/layuiadmin/modules/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/layuiadmin/modules/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/content/comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/content/contform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/content/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/content/listform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/content/tags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/content/tagsform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/forum/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/forum/listform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/forum/replys.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/forum/replysform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/mall/category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/mall/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/mall/specs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/message/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/message/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/workorder/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/workorder/listform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/anim/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/auxiliar/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/badge/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/button/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/carousel/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/code/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/colorpicker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/flow/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/form/element.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/form/group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/grid/all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/grid/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/grid/mobile-pc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/grid/mobile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/grid/speed-dial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/grid/stack.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laydate/demo1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laydate/demo2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laydate/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laydate/special-demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laydate/theme.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/layer/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/layer/special-demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/layer/theme.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laypage/demo1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laypage/demo2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laypage/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/laytpl/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/nav/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/panel/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/progress/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/rate/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/slider/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/auto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/cellEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/cellEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/checkbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/fixed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/height.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/initSort.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/onrow.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/operate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/parseData.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/radio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/reload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/resetPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/static.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/style.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/thead.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/toolbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/tostatic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/table/totalRow.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/tabs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/temp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/timeline/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/upload/demo1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/upload/demo2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/upload/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/util/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/console.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/homepage1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/homepage2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/iframe/layer/iframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/senior/echarts/bar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/senior/echarts/line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/senior/echarts/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/senior/im/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/senior/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/set/system/email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/set/system/website.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/set/user/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/set/user/password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/set/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/get.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/more.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/theme.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/addresslist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/caller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/goodslist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/msgboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/personalpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/temp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/tips/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/tips/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/administrators/adminform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/administrators/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/administrators/role.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/administrators/roleform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/forget.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/reg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/user/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/user/userform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/说明.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,36 +141,83 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="142">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
-                <element signature="e#7#389#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#dd#2;n#dl#0;n#li#4;n#ul#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <file leaf-file-name="menu.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/menu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="24" />
+            <state relative-caret-position="6692">
+              <caret line="238" column="47" selection-start-line="238" selection-start-column="37" selection-end-line="238" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home/console.html">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/admin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="34" column="16" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/layuiadmin/lib/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="819" column="20" selection-start-line="819" selection-start-column="20" selection-end-line="819" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="child.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/child.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/user/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -53,6 +225,26 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>主体</find>
+      <find>主页</find>
+      <find>layui-nav-item layui-show-xs-inline-block layui-hide-sm</find>
+      <find>more</find>
+      <find>layui-layer layui-layer-page layui-anim layui-anim-rl layui-layer-adminRight</find>
+      <find>pointer</find>
+      <find>layadmin-panel-selection</find>
+      <find>组</find>
+      <find>list</find>
+      <find>menu</find>
+      <find>lay-url</find>
+      <find>user/login.html</find>
+      <find>theme</find>
+      <find>user/login</find>
+      <find>user/login`</find>
+      <find>退出</find>
+      <find>login</find>
+      <find>layadmin-event</find>
+      <find>login.html</find>
+      <find>logout</find>
+      <find>中心</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -63,7 +255,15 @@
       <list>
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/index.html" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/child.blade.php" />
+        <option value="$PROJECT_DIR$/public/layuiadmin/style/admin.css" />
+        <option value="$PROJECT_DIR$/public/layuiadmin/json/menu.js" />
+        <option value="$PROJECT_DIR$/resources/views/menu.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/storage/framework/views/dd2d51ccef38564edaa38676ceda96c84eecb720.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/login.blade.php" />
+        <option value="$PROJECT_DIR$/public/layuiadmin/modules/common.js" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
       </list>
     </option>
@@ -176,6 +376,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,7 +387,41 @@
             <path>
               <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="git_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
@@ -202,25 +437,50 @@
             <path>
               <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git_admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://C:/Code/work/git_admin/routes/web.php" />
+    <property name="SearchEverywhereHistoryKey" value="login.js&#9;FILE&#9;file://C:/Code/work/git_admin/public/layuiadmin/json/user/login.js&#10;web&#9;FILE&#9;file://C:/Code/work/git_admin/routes/web.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin.qiandao.wasair.com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../qiandao.wasair.com" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.chrisrm.idea.config.mtCustomThemeConfig" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Code\work\git_admin\resources\views\user" />
       <recent name="C:\Code\work\git_admin\resources\views" />
       <recent name="C:\Code\work\git_admin\public" />
     </key>
@@ -251,25 +511,30 @@
       <workItem from="1554194767331" duration="694000" />
       <workItem from="1554199763676" duration="669000" />
       <workItem from="1554258701663" duration="5245000" />
+      <workItem from="1554345822764" duration="6956000" />
+      <workItem from="1554951557822" duration="163000" />
+      <workItem from="1554952235611" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6704000" />
+    <option name="totallyTimeSpent" value="21546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4922049" visible="true" weight="0.32526475" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289256" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32838285" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" x="475" y="275" width="871" height="327" id="Version Control" order="10" type="WINDOWED" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" x="437" y="101" width="684" height="567" id="Terminal" order="9" sideWeight="0.49924356" type="WINDOWED" weight="0.32343236" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4922049" weight="0.34114978" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32967034" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32838285" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5077951" side_tool="true" weight="0.22163388" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25785124" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -277,7 +542,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32838285" />
       <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="3" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -289,6 +553,44 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/说明.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/menu1.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/console.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2296">
+          <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -325,29 +627,172 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/console.html">
+    <entry file="file://$PROJECT_DIR$/resources/views/home/homepage1.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/home/homepage2.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/home/console.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/app/说明.txt" />
+    <entry file="file://$PROJECT_DIR$/resources/views/app/forum/list.html" />
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1512" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/tpl/layim/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-302" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/tpl/system/about.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/tpl/system/get.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/tpl/system/more.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/tpl/system/说明.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/tpl/说明.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/res/template/character.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/res/bg-none.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/res/layui-logo.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/res/logo-black.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/login.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/console/prograss.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-610" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/layui/css/layui.mobile.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/说明.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/menu1.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/modules/console.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/layuiadmin/lib/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/child.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/style/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/lib/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="819" column="20" selection-start-line="819" selection-start-column="20" selection-end-line="819" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/dd2d51ccef38564edaa38676ceda96c84eecb720.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="222" column="37" selection-start-line="222" selection-start-column="37" selection-end-line="222" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/modules/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="80" column="52" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/layuiadmin/json/user/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6692">
+          <caret line="238" column="47" selection-start-line="238" selection-start-column="37" selection-end-line="238" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="24" />
+        <state relative-caret-position="142">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#dd#2;n#dl#0;n#li#4;n#ul#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
