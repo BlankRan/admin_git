@@ -31,6 +31,9 @@ layui.define(['table', 'form'], function(exports){
     ,limit: 10
     ,limits: [10, 15, 20, 25, 30]
     ,text: '对不起，加载出现异常！'
+      ,done:function (data) {
+          console.log(layui.setter.base);
+      }
   });
   
   //监听工具条

@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('user/login', function () {
     return view('user.login');
 });
+Route::get('apps/application', function () {
+    return view('apps.application');
+});

@@ -4,9 +4,9 @@
  @Author：贤心
  @Site：http://www.layui.com/admin/
  @License：LPPL
-    
+
  */
- 
+
 layui.extend({
   setter: 'config' //配置模块
   ,admin: 'lib/admin' //核心模块
@@ -17,26 +17,26 @@ layui.extend({
   ,admin = layui.admin
   ,tabsPage = admin.tabsPage
   ,view = layui.view
-  
+
   //打开标签页
   ,openTabsPage = function(url, text){
     //遍历页签选项卡
     var matchTo
     ,tabs = $('#LAY_app_tabsheader>li')
     ,path = url.replace(/(^http(s*):)|(\?[\s\S]*$)/g, '');
-    
+
     tabs.each(function(index){
       var li = $(this)
       ,layid = li.attr('lay-id');
-      
+
       if(layid === url){
         matchTo = true;
         tabsPage.index = index;
       }
     });
-    
+
     text = text || '新标签页';
-    
+
     if(setter.pageTabs){
       //如果未在选项卡中匹配到，则追加选项卡
       if(!matchTo){
@@ -64,27 +64,27 @@ layui.extend({
       ,text: text
     });
   }
-  
+
   ,APP_BODY = '#LAY_app_body', FILTER_TAB_TBAS = 'layadmin-layout-tabs'
   ,$ = layui.$, $win = $(window);
-  
+
   //初始
   if(admin.screen() < 2) admin.sideFlexible();
-  
+
   //将模块根路径设置为 controller 目录
   layui.config({
     base: setter.base + 'modules/'
   });
-  
+
   //扩展 lib 目录下的其它模块
   layui.each(setter.extend, function(index, item){
     var mods = {};
     mods[item] = '{/}' + setter.base + 'lib/extend/' + item;
     layui.extend(mods);
   });
-  
+
   view().autoRender();
-  
+
   //加载公共模块
   layui.use('common');
 

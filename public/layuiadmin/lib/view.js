@@ -172,10 +172,10 @@ layui.define(['laytpl', 'layer'], function(exports){
   Class.prototype.render = function(views, params){
     var that = this, router = layui.router();
     views = setter.views + views + setter.engine;
-    
+
     $('#'+ LAY_BODY).children('.layadmin-loading').remove();
     view.loading(that.container); //loading
-    
+
     //请求模板
     $.ajax({
       url: views
@@ -186,45 +186,45 @@ layui.define(['laytpl', 'layer'], function(exports){
       }
       ,success: function(html){
         html = '<div>' + html + '</div>';
-        
+
         var elemTitle = $(html).find('title')
         ,title = elemTitle.text() || (html.match(/\<title\>([\s\S]*)\<\/title>/)||[])[1];
-        
+
         var res = {
           title: title
           ,body: html
         };
-        
+
         elemTitle.remove();
         that.params = params || {}; //获取参数
-        
+
         if(that.then){
           that.then(res);
-          delete that.then; 
+          delete that.then;
         }
 
         that.parse(html);
         view.removeLoad();
-        
+
         if(that.done){
           that.done(res);
-          delete that.done; 
+          delete that.done;
         }
-        
+
       }
       ,error: function(e){
         view.removeLoad();
-        
+
         if(that.render.isError){
           return view.error('请求视图文件异常，状态：'+ e.status);
         };
-        
+
         if(e.status === 404){
           that.render('template/tips/404');
         } else {
           that.render('template/tips/error');
         }
-        
+
         that.render.isError = true;
       }
     });
@@ -242,10 +242,10 @@ layui.define(['laytpl', 'layer'], function(exports){
       ,res = $.extend({
         params: router.params
       }, options.res);
-      
+
       options.dataElem.after(tpl.render(res));
       typeof callback === 'function' && callback();
-      
+
       try {
         options.done && new Function('d', options.done)(res);
       } catch(e){
@@ -253,12 +253,12 @@ layui.define(['laytpl', 'layer'], function(exports){
       }
     }
     ,router = layui.router();
-    
+
     elem.find('title').remove();
     that.container[refresh ? 'after' : 'html'](elem.children());
-    
+
     router.params = that.params || {};
-    
+
     //遍历模板区块
     for(var i = elemTemp.length; i > 0; i--){
       (function(){
@@ -267,21 +267,21 @@ layui.define(['laytpl', 'layer'], function(exports){
         ,url = laytpl(dataElem.attr('lay-url')|| '').render(router) //接口 url
         ,data = laytpl(dataElem.attr('lay-data')|| '').render(router) //接口参数
         ,headers = laytpl(dataElem.attr('lay-headers')|| '').render(router); //接口请求的头信息
-        
+
         try {
           data = new Function('return '+ data + ';')();
         } catch(e) {
           hint.error('lay-data: ' + e.message);
           data = {};
         };
-        
+
         try {
           headers = new Function('return '+ headers + ';')();
         } catch(e) {
           hint.error('lay-headers: ' + e.message);
           headers = headers || {}
         };
-        
+
         if(url){
           view.req({
             type: dataElem.attr('lay-type') || 'get'
@@ -305,7 +305,7 @@ layui.define(['laytpl', 'layer'], function(exports){
         }
       }());
     }
-    
+
     return that;
   };
   

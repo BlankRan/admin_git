@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="layui-nav-item layui-hide-xs" lay-unselect>
-            <a href="javascript:;" layadmin-event="fullscreen">
+            <a href="javascript:;" layadmin-event="fullscreezn">
               <i class="layui-icon layui-icon-screen-full"></i>
             </a>
           </li>
@@ -84,7 +84,7 @@
               </a>
               <dl class="layui-nav-child">
                 <dd data-name="console" class="layui-this">
-                  <a lay-href="home/console.html">应用管理</a>
+                  <a lay-href="apps/application">应用管理</a>
                 </dd>
               </dl>
             </li>
