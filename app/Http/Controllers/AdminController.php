@@ -52,4 +52,8 @@ class AdminController extends Controller
         }
     }
 
+    public function edit(){
+        print_r($this->params['id']);
+    }
+
 }

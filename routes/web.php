@@ -35,6 +35,7 @@ Route::get('user/adminform',function (){
 Route::post('user/add','AdminController@add');
 Route::post('user/json/admin','AdminController@json');
 Route::post('admin/del','AdminController@del');
+Route::get('admin/edit','AdminController@edit');
 //Route::middleware(['checkLogin'])->group(function ()
 //{
     Route::get('/', function () {
