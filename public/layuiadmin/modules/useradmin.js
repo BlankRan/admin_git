@@ -16,8 +16,8 @@ layui.define(['table', 'form'], function(exports){
   //用户管理
   table.render({
     elem: '#LAY-user-manage'
-    ,url: layui.setter.base + 'json/useradmin/webuser.js' //模拟接口
-    ,cols: [[
+    // ,url: layui.setter.base + 'json/useradmin/webuser.js' //模拟接口
+      ,cols: [[
       {type: 'checkbox', fixed: 'left'}
       ,{field: 'id', width: 100, title: 'ID', sort: true}
       ,{field: 'username', title: '用户名', minWidth: 100}
@@ -87,16 +87,18 @@ layui.define(['table', 'form'], function(exports){
   //管理员管理
   table.render({
     elem: '#LAY-user-back-manage'
-    ,url: layui.setter.base + 'json/useradmin/mangadmin.js' //模拟接口
-    ,cols: [[
-      {type: 'checkbox', fixed: 'left'}
-      ,{field: 'id', width: 80, title: 'ID', sort: true}
-      ,{field: 'loginname', title: '登录名'}
-      ,{field: 'telphone', title: '手机'}
-      ,{field: 'email', title: '邮箱'}
-      ,{field: 'role', title: '角色'}
-      ,{field: 'jointime', title: '加入时间', sort: true}
-      ,{field: 'check', title:'审核状态', templet: '#buttonTpl', minWidth: 80, align: 'center'}
+    // ,url: layui.setter.base + 'json/useradmin/mangadmin.js' //模拟接口
+      ,url: 'json/admin'
+      ,where:{_token:$('#token').val()}
+      ,method:'POST'
+      ,cols: [[
+      {fixed: 'left',field: 'id', width: 80, title: 'ID', sort: true,align:'center'}
+      ,{field: 'username', title: '登录名',align:'center'}
+      ,{field: 'phone', title: '手机',align:'center'}
+      ,{field: 'email', title: '邮箱',align:'center'}
+      // ,{field: 'role', title: '角色'}
+      ,{field: 'created_at', title: '创建时间', sort: true,align:'center'}
+      ,{field: 'check', title:'用户状态', templet: '#buttonTpl', minWidth: 80, align: 'center',align:'center'}
       ,{title: '操作', width: 150, align: 'center', fixed: 'right', toolbar: '#table-useradmin-admin'}
     ]]
     ,text: '对不起，加载出现异常！'
@@ -106,17 +108,22 @@ layui.define(['table', 'form'], function(exports){
   table.on('tool(LAY-user-back-manage)', function(obj){
     var data = obj.data;
     if(obj.event === 'del'){
-      layer.prompt({
-        formType: 1
-        ,title: '敏感操作，请验证口令'
-      }, function(value, index){
-        layer.close(index);
         layer.confirm('确定删除此管理员？', function(index){
-          console.log(obj)
-          obj.del();
-          layer.close(index);
+            console.log(obj);
+            $.post('/admin/del',{id:data.id,_token:$('#token').val()},function (data) {
+              if (data.code == 200){
+                  layer.msg(data.msg, {
+                      icon: 1
+                  });
+              }else {
+                  layer.msg('删除失败', {
+                      icon: 2
+                  });
+              }
+            });
+            obj.del();
+            layer.close(index);
         });
-      });
     }else if(obj.event === 'edit'){
       var tr = $(obj.tr);
 
