@@ -49,16 +49,15 @@
 
             <div class="layui-card-body">
                 <div style="padding-bottom: 10px;">
-                    <button class="layui-btn layuiadmin-btn-admin" data-type="batchdel">删除</button>
                     <button class="layui-btn layuiadmin-btn-admin" data-type="add">添加</button>
                 </div>
                 <table id="LAY-user-back-manage" lay-filter="LAY-user-back-manage"></table>
                 <input id="token" class="layui-hide" value="{{csrf_token()}}">
                 <script type="text/html" id="buttonTpl">
                     @{{#  if(d.status == 1){ }}
-                    <button class="layui-btn layui-btn-xs">正常</button>
+                    <button class="layui-btn layui-btn-xs" lay-event="close">正常</button>
                     @{{#  } else { }}
-                    <button class="layui-btn layui-btn-primary layui-btn-xs">禁用</button>
+                    <button class="layui-btn layui-btn-primary layui-btn-xs" lay-event="open">禁用</button>
                     @{{#  } }}
                 </script>
 
@@ -68,7 +67,7 @@
                     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
                 </script>
                 {{---->--}}
-                <input class="layui-hide" name="_token" value="{{csrf_token()}}">
+                <input class="layui-hide" name="_token" value="{{csrf_token()}}" id="token">
             </div>
         </div>
     </div>
@@ -125,14 +124,12 @@
                                             icon: 2
                                         });
                                     }
-                                    // table.reload('LAY-user-back-manage'); //数据刷新
-
                                 });
                             });
                         }
                     });
                 }
-            }
+            };
             $('.layui-btn.layuiadmin-btn-admin').on('click', function () {
                 var type = $(this).data('type');
                 active[type] ? active[type].call(this) : '';

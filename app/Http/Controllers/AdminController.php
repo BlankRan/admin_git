@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function json()
     {
-        $items = Admin::getData();
+        $items = Admin::getDatas();
         $this->data = $items;
         $this->returnJsonData();
 
@@ -18,6 +18,7 @@ class AdminController extends Controller
 
     public function add()
     {
+        $id = $this->params['id'] ?? 0;
         if ($this->params['loginpwd'] != $this->params['againpwd']){
             $this->showCodeMassage($this->FAILED,'两次登陆密码不一致！');
         }
@@ -35,7 +36,7 @@ class AdminController extends Controller
             'updated_at'=>$time,
             'status'=>$this->params['status'],
         ];
-        $saved = Admin::Saved($data);
+        $saved = Admin::Saved($data,$id);
         if ($saved) $this->showCodeMassage($this->SUCCESS,'添加成功！');
         $this->showCodeMassage($this->FAILED,'添加失败！');
     }
@@ -52,8 +53,20 @@ class AdminController extends Controller
         }
     }
 
-    public function edit(){
-        print_r($this->params['id']);
+    public function edit($id){
+        $adminData = Admin::getData($id);
+        return view('user.edit',compact(['adminData']));
+    }
+
+    public function status()
+    {
+        $id=$this->params['id'];
+        if (!$id) $this->showCodeMassage(0,'');
+        $item = Admin::find($id);
+        $item->status = $this->params['status'] ?? -1;
+        if ($item->save()){
+            $this->showCodeMassage(200,'');
+        }
     }
 
 }

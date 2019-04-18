@@ -10,9 +10,9 @@ class Admin extends Model
     protected $table = 'admin';
 
     //获取所有数据
-    public static function getData($option = '')
+    public static function getDatas($option = '',$select='*')
     {
-        $items = self::where('delete',1)->get();
+        $items = self::where('delete',1)->select($select)->get();
         $data = array('code'=>0,'msg'=>'','count'=>0);
         $data['data'] = array();
         foreach($items as $item)
@@ -30,14 +30,21 @@ class Admin extends Model
     }
 
     //保存数据(新建数据)
-    public static function Saved($data = [])
+    public static function Saved($data = [],$id=0)
     {
+        $item = self::find($id);
         if (!$data) return false;
-        $item = new Admin;
+        if (!$id) $item = new self;
         foreach ($data['data'] as $k => $v)
         {
             $item->$k = $v;
         }
         if ($item->save()) return true;
+    }
+
+    public static function getData($id,$select='*'){
+        if (!$id) return '';
+        $adminData = Admin::where('id',$id)->select($select)->first();
+        return $adminData;
     }
 }

@@ -126,35 +126,66 @@ layui.define(['table', 'form'], function(exports){
         });
     }else if(obj.event === 'edit'){
       var tr = $(obj.tr);
-
         layer.open({
             type: 2
             , title: '编辑管理员'
-            , content: '/admin/edit'
-            , where: {id: data.id}
+            , content: '/admin/edit/'+data.id
             , area: ['420px', '420px']
             , btn: ['确定', '取消']
             , yes: function (index, layero) {
                 var iframeWindow = window['layui-layer-iframe' + index]
                     , submitID = 'LAY-user-back-submit'
-                    , submit = layero.find('iframe').contents().find('#' + submitID);
-                    ，submitFilter = 'LAY-user-front-submit';
+                    , submit = layero.find('iframe').contents().find('#' + submitID)
+                    ,submitFilter = 'LAY-user-front-submit';
                 //监听提交
                 iframeWindow.layui.form.on('submit(' + submitFilter + ')', function (data) {
                     var field = data.field; //获取提交的字段
-
                     //提交 Ajax 成功后，静态更新表格中的数据
-                    //$.ajax({});
-                    table.reload('LAY-user-front-submit'); //数据刷新
-                    // layer.close(index); //关闭弹层
+                    $.post("/user/add",field,function (data) {
+                        if (data.code == 200) {
+                            layer.msg('修改成功', {
+                                icon: 1
+                            });
+                            table.reload('LAY-user-back-manage'); //数据刷新
+                            layer.close(index); //关闭弹层
+                        }else {
+                            layer.msg('修改失败', {
+                                icon: 2
+                            });
+                        }
+                    });
                 });
-
                 submit.trigger('click');
             }
-            , success: function (layero, index) {
-
-            }
         })
+    }else if (obj.event === 'open'){
+        $.post("/user/status",{status:1,_token:$('#token').val(),id:data.id},function (data) {
+            if (data.code == 200) {
+                layer.msg('用户状态已启用', {
+                    icon: 1
+                });
+                table.reload('LAY-user-back-manage'); //数据刷新
+            }else {
+                layer.msg('用户状态修改失败', {
+                    icon: 2
+                });
+            }
+        });
+    }else if (obj.event === 'close'){
+        $.post("/user/status",{status:-1,_token:$('#token').val(),id:data.id},function (data) {
+            if (data.code == 200) {
+                layer.msg('用户状态已禁用', {
+                    icon: 1
+                    ,time:500
+                });
+                table.reload('LAY-user-back-manage'); //数据刷新
+            }else {
+                layer.msg('用户状态修改失败', {
+                    icon: 2
+                    ,time:500
+                });
+            }
+        });
     }
   });
 

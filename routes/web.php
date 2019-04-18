@@ -32,10 +32,22 @@ Route::get('user/admin',function (){
 Route::get('user/adminform',function (){
     return view('user.adminform');
 });
+Route::get('application/addform',function (){
+    return view('apps.create');
+});
 Route::post('user/add','AdminController@add');
 Route::post('user/json/admin','AdminController@json');
 Route::post('admin/del','AdminController@del');
-Route::get('admin/edit','AdminController@edit');
+Route::get('admin/edit/{id}','AdminController@edit');
+Route::post('user/status','AdminController@status');
+Route::get('apps/application',function (){
+    return view('apps.application');
+});
+Route::group(['namespace'=>'Apps'],function (){
+    Route::post('application/add','ApplicationController@add');
+});
+//Route::middleware(['namespace'=> 'Apps'])->group(function (){
+//});
 //Route::middleware(['checkLogin'])->group(function ()
 //{
     Route::get('/', function () {

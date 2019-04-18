@@ -59,7 +59,7 @@
             </div>
         </div>
         <input class="layui-hide" name="status" id="status" value="-1">
-        <div class="layui-form-item ">
+        <div class="layui-form-item layui-hide">
             <input type="button" lay-submit lay-filter="LAY-user-front-submit" id="LAY-user-back-submit" value="确认">
         </div>
     </div>
