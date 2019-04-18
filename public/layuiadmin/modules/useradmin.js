@@ -127,33 +127,34 @@ layui.define(['table', 'form'], function(exports){
     }else if(obj.event === 'edit'){
       var tr = $(obj.tr);
 
-      layer.open({
-        type: 2
-        ,title: '编辑管理员'
-        ,content: '../../../views/user/administrators/adminform.html'
-        ,area: ['420px', '420px']
-        ,btn: ['确定', '取消']
-        ,yes: function(index, layero){
-          var iframeWindow = window['layui-layer-iframe'+ index]
-          ,submitID = 'LAY-user-back-submit'
-          ,submit = layero.find('iframe').contents().find('#'+ submitID);
+        layer.open({
+            type: 2
+            , title: '编辑管理员'
+            , content: '/admin/edit'
+            , where: {id: data.id}
+            , area: ['420px', '420px']
+            , btn: ['确定', '取消']
+            , yes: function (index, layero) {
+                var iframeWindow = window['layui-layer-iframe' + index]
+                    , submitID = 'LAY-user-back-submit'
+                    , submit = layero.find('iframe').contents().find('#' + submitID);
+                    ，submitFilter = 'LAY-user-front-submit';
+                //监听提交
+                iframeWindow.layui.form.on('submit(' + submitFilter + ')', function (data) {
+                    var field = data.field; //获取提交的字段
 
-          //监听提交
-          iframeWindow.layui.form.on('submit('+ submitID +')', function(data){
-            var field = data.field; //获取提交的字段
-            
-            //提交 Ajax 成功后，静态更新表格中的数据
-            //$.ajax({});
-            table.reload('LAY-user-front-submit'); //数据刷新
-            layer.close(index); //关闭弹层
-          });  
-          
-          submit.trigger('click');
-        }
-        ,success: function(layero, index){           
-          
-        }
-      })
+                    //提交 Ajax 成功后，静态更新表格中的数据
+                    //$.ajax({});
+                    table.reload('LAY-user-front-submit'); //数据刷新
+                    // layer.close(index); //关闭弹层
+                });
+
+                submit.trigger('click');
+            }
+            , success: function (layero, index) {
+
+            }
+        })
     }
   });
 
