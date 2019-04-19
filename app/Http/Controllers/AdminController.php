@@ -13,7 +13,6 @@ class AdminController extends Controller
         $items = Admin::getDatas();
         $this->data = $items;
         $this->returnJsonData();
-
     }
 
     public function add()

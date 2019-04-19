@@ -78,6 +78,11 @@
                   <a lay-href="apps/application">应用管理</a>
                 </dd>
               </dl>
+              <dl class="layui-nav-child">
+                <dd>
+                  <a lay-href="apps/application">应用发布</a>
+                </dd>
+              </dl>
             </li>
 
 

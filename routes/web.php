@@ -44,7 +44,13 @@ Route::get('apps/application',function (){
     return view('apps.application');
 });
 Route::group(['namespace'=>'Apps'],function (){
-    Route::post('application/add','ApplicationController@add');
+    //应用管理
+    Route::post('application/add','ApplicationController@save');
+    Route::post('json/application','ApplicationController@json');
+    Route::post('application/del','ApplicationController@del');
+    Route::get('application/edit/{id}','ApplicationController@edit');
+    Route::get('json/push_manage','ApplicationController@pushJson');
+
 });
 //Route::middleware(['namespace'=> 'Apps'])->group(function (){
 //});

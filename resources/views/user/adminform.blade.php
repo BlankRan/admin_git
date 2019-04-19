@@ -53,9 +53,9 @@
         </div>
         -->
         <div class="layui-form-item">
-            <label class="layui-form-label">审核状态</label>
+            <label class="layui-form-label">用户状态</label>
             <div class="layui-input-inline">
-                <input type="checkbox" lay-filter="switch" name="switch" lay-skin="switch" lay-text="通过|待审核">
+                <input type="checkbox" lay-filter="switch" name="switch" lay-skin="switch" lay-text="启用|禁用">
             </div>
         </div>
         <input class="layui-hide" name="status" id="status" value="-1">

@@ -5,6 +5,12 @@
             <div class="layui-form layui-card-header layuiadmin-card-header-auto">
                 <div class="layui-form-item">
                     <div class="layui-inline">
+                        <label class="layui-form-label">ID</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="app_id" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
                         <label class="layui-form-label">应用名称</label>
                         <div class="layui-input-block">
                             <input type="text" name="app_name" placeholder="请输入" autocomplete="off" class="layui-input">
@@ -14,12 +20,6 @@
                         <label class="layui-form-label">域名</label>
                         <div class="layui-input-block">
                             <input type="text" name="domain_name" placeholder="请输入" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">主机:</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="node" placeholder="请输入" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
@@ -36,14 +36,12 @@
                 </div>
                 <table id="LAY-user-back-manage" lay-filter="LAY-user-back-manage"></table>
                 <input id="token" class="layui-hide" value="{{csrf_token()}}">
-                {{--<!----}}
                 <script type="text/html" id="table-useradmin-admin">
                     <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
                     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
-                    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="back"><i class="layui-icon layui-icon-delete"></i>回滚</a>
-                    <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="push"><i class="layui-icon layui-icon-delete"></i>发布</a>
+                    {{--<a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="back"><i class="layui-icon layui-icon-delete"></i>回滚</a>--}}
+                    {{--<a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="push"><i class="layui-icon layui-icon-delete"></i>发布</a>--}}
                 </script>
-                {{---->--}}
                 <input class="layui-hide" name="_token" value="{{csrf_token()}}" id="token">
             </div>
         </div>
@@ -85,7 +83,6 @@
                                 ,submitFilter = 'LAY-user-front-submit';
 
                             //监听提交
-                            submit.trigger('click');
                             iframeWindow.layui.form.on('submit(' + submitFilter + ')', function (data) {
                                 var field = data.field; //获取提交的字段
                                 //提交 Ajax 成功后，静态更新表格中的数据
@@ -102,11 +99,13 @@
                                     }
                                 });
                             });
+                            submit.trigger('click');
                         }
                     });
                 }
             };
             $('.layui-btn.layuiadmin-btn-admin').on('click', function () {
+
                 var type = $(this).data('type');
                 active[type] ? active[type].call(this) : '';
             });

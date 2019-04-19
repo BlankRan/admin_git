@@ -37,9 +37,11 @@ class Admin extends Model
         if (!$id) $item = new self;
         foreach ($data['data'] as $k => $v)
         {
+            if ($id && $k=='update_at') continue;
             $item->$k = $v;
         }
         if ($item->save()) return true;
+        return false;
     }
 
     public static function getData($id,$select='*'){
