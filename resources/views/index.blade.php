@@ -74,13 +74,13 @@
                 <cite>主页</cite>
               </a>
               <dl class="layui-nav-child">
-                <dd data-name="console" class="layui-this">
+                <dd data-name="console">
                   <a lay-href="apps/application">应用管理</a>
                 </dd>
               </dl>
               <dl class="layui-nav-child">
                 <dd>
-                  <a lay-href="apps/application">应用发布</a>
+                  <a lay-href="apps/publish">应用发布</a>
                 </dd>
               </dl>
             </li>

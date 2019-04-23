@@ -30,6 +30,22 @@ class IpNode extends Model
         return true;
     }
 
+    public static function getDatas($option = [],$select='*')
+    {
+        $items = self::where($option)->select($select)->get();
+        $data['data'] = array();
+        foreach($items as $item)
+        {
+            $data['data'][  ] =array(
+                'ip_id' => $item->id,
+                'ip' => $item->ip,
+                //                'admin_id' => $item->admin_id,
+                'pid' => $item->apps_id,
+                'remark' => $item->remark,
+            );
+        }
+        return $data;
+    }
 
 
 }

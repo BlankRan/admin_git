@@ -34,6 +34,7 @@ class Apps extends Model
         $data['data'] = array();
         foreach($items as $item)
         {
+            $number = IpNode::select('id')->where('apps_id',$item->id)->count();
             $data['data'][  ] =array(
                 'id' => $item->id,
                 'name' => $item->name,
@@ -44,7 +45,23 @@ class Apps extends Model
                 'composer' => $item->composer,
                 'created_at' => $item->created_at,
                 'updated_at' => $item->updated_at,
+                'pid' => 0,
+                'number' => $number,
             );
+            if ($item->ipNode)
+            {
+                foreach($item->ipNode as $v)
+                {
+                    $data['data'][] = array(
+                        'name' => $item->name,
+                        'domain_name' => $item->domain_name,
+                        'id' => $v->id+10000,
+                        'ip' => $v->ip,
+                        'pid' => $v->apps_id,
+                        'remark' => $v->remark,
+                    );
+                }
+            }
         }
         return $data;
     }

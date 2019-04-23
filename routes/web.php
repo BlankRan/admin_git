@@ -49,7 +49,9 @@ Route::group(['namespace'=>'Apps'],function (){
     Route::post('json/application','ApplicationController@json');
     Route::post('application/del','ApplicationController@del');
     Route::get('application/edit/{id}','ApplicationController@edit');
-    Route::get('json/push_manage','ApplicationController@pushJson');
+//    Route::get('json/push_manage','ApplicationController@pushJson');
+    Route::get('apps/publish','ApplicationPublishController@list');
+    Route::post('json/publish','ApplicationPublishController@json');
 
 });
 //Route::middleware(['namespace'=> 'Apps'])->group(function (){
