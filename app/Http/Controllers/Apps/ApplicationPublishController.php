@@ -15,7 +15,7 @@ class ApplicationPublishController extends Controller
     }
 
     public function json(){
-        $appDatas = Apps::getDatas();
+        $appDatas = Apps::getDatas([],'*',true);
 
 //        $appLogs = IpNode::getDatas();
 //        foreach ($appLogs['data'] as $appLog)
@@ -24,5 +24,30 @@ class ApplicationPublishController extends Controller
 //        }
         $this->data = $appDatas;
         $this->returnJsonData();
+    }
+
+    public function log(){
+        print_r($this->params['id']);
+
+    }
+    public function rollback(){
+        print_r($this->params['id']);
+
+    }
+    public function release(){
+        $text = 'temp.sh';
+        $str = "#!/bin/sh\n";
+        $location = "cd /data/deploy/admin_git/\n";
+        $shell = "git pull origin master\n";
+        $shells = $str.$location.$shell;
+        file_put_contents($text,$shells);
+        exec($text, $result, $status);
+        print_r($result);
+        print_r($status);
+
+    }
+    public function quick(){
+        print_r($this->params['id']);
+
     }
 }

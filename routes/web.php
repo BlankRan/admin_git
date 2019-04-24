@@ -53,6 +53,11 @@ Route::group(['namespace'=>'Apps'],function (){
     Route::get('apps/publish','ApplicationPublishController@list');
     Route::post('json/publish','ApplicationPublishController@json');
 
+    Route::post('publish/log','ApplicationPublishController@log');
+    Route::post('publish/rollback','ApplicationPublishController@rollback');
+    Route::post('publish/release','ApplicationPublishController@release');
+    Route::post('publish/quick','ApplicationPublishController@quick');
+
 });
 //Route::middleware(['namespace'=> 'Apps'])->group(function (){
 //});

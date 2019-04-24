@@ -2224,7 +2224,7 @@ layui.config({
         that.columnWidthInit();//列宽度计算
         that.tableHeight();//表格高度计算
         that.resizeHeight();//高度控制
-        that.resizeWidth();//宽度控制
+        // that.resizeWidth();//宽度控制
     };
 
     //动态分配列宽高
@@ -2305,10 +2305,10 @@ layui.config({
     /**
      * 重新渲染宽度
      */
-    // Class.prototype.resizeWidth = function(){
-    //     var that = this;
-    //     that.renderTdCss();
-    // };
+    Class.prototype.resizeWidth = function(){
+        var that = this;
+        that.renderTdCss();
+    };
     /**
      * 表格高度计算
      */
@@ -2328,7 +2328,7 @@ layui.config({
                     }
                 });
             }
-            //高度铺满：full-差距值
+            //高度铺满：full-差距值resizeWidth
             var th=_WIN.height()-htremove-1;//that.getParentDivHeight(options.id);
             that.fullHeightGap=0;
             if(options.height){

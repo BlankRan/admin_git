@@ -49,59 +49,60 @@ layui.define(['table', 'form','treeGrid'], function(exports){
     });
 
 
-    table.on('tool(LAY-user-back-manage)', function(obj) {
+    treeGird.on('tool(LAY-user-back-manage)', function(obj) {
         var data = obj.data;
-        if (obj.event === 'del') {
-            layer.confirm('确定删除此应用？', function (index) {
-                console.log(obj);
-                $.post('/application/del', {id: data.id, _token: $('#token').val()}, function (data) {
+        if (obj.event === 'log') {
+                $.post('/publish/log', {id: data.id, _token: $('#token').val()}, function (data) {
                     if (data.code == 200) {
                         layer.msg(data.msg, {
                             icon: 1
                         });
                     } else {
-                        layer.msg('删除失败', {
+                        layer.msg(data.msg, {
                             icon: 2
                         });
                     }
                 });
-                obj.del();
                 layer.close(index);
-            });
-        } else if (obj.event === 'edit') {
-            var tr = $(obj.tr);
-            layer.open({
-                type: 2
-                , title: '编辑应用'
-                , content: '/application/edit/' + data.id
-                , area: ['500px', '420px']
-                , btn: ['确定', '取消']
-                , yes: function (index, layero) {
-                    var iframeWindow = window['layui-layer-iframe' + index]
-                        , submitID = 'LAY-user-back-submit'
-                        , submit = layero.find('iframe').contents().find('#' + submitID)
-                        , submitFilter = 'LAY-user-front-submit';
-                    //监听提交
-                    iframeWindow.layui.form.on('submit(' + submitFilter + ')', function (data) {
-                        var field = data.field; //获取提交的字段
-                        //提交 Ajax 成功后，静态更新表格中的数据
-                        $.post("/application/add", field, function (data) {
-                            if (data.code == 200) {
-                                layer.msg('修改成功', {
-                                    icon: 1
-                                });
-                                table.reload('LAY-user-back-manage'); //数据刷新
-                                layer.close(index); //关闭弹层
-                            } else {
-                                layer.msg('修改失败', {
-                                    icon: 2
-                                });
-                            }
-                        });
+        } else if (obj.event === 'rollback') {
+            $.post('/publish/rollback', {id: data.id, _token: $('#token').val()}, function (data) {
+                if (data.code == 200) {
+                    layer.msg(data.msg, {
+                        icon: 1
                     });
-                    submit.trigger('click');
+                } else {
+                    layer.msg(data.msg, {
+                        icon: 2
+                    });
                 }
-            })
+            });
+            layer.close(index);
+        }else if (obj.event === 'release') {
+            $.post('/publish/release', {id: data.id, _token: $('#token').val()}, function (data) {
+                if (data.code == 200) {
+                    layer.msg(data.msg, {
+                        icon: 1
+                    });
+                } else {
+                    layer.msg(data.msg, {
+                        icon: 2
+                    });
+                }
+            });
+            layer.close(index);
+        }else if (obj.event === 'quick') {
+            $.post('/publish/quick', {id: data.id, _token: $('#token').val()}, function (data) {
+                if (data.code == 200) {
+                    layer.msg(data.msg, {
+                        icon: 1
+                    });
+                } else {
+                    layer.msg(data.msg, {
+                        icon: 2
+                    });
+                }
+            });
+            layer.close(index);
         }
     });
 

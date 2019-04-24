@@ -46,15 +46,15 @@
 
             <div class="layui-card-body">
                 <div style="padding-bottom: 10px;">
-                    <button class="layui-btn layuiadmin-btn-admin" data-type="add">添加</button>
+                    <button class="layui-btn layuiadmin-btn-admin" data-type="add"><i class="layui-icon layui-icon-release"></i>批量发布</button>
                 </div>
                 <table id="LAY-user-back-manage" lay-filter="LAY-user-back-manage"></table>
                 <input id="token" class="layui-hide" value="{{csrf_token()}}">
                 <script type="text/html" id="table-useradmin-admin">
-                    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>内容</a>
-                    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>回滚</a>
-                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>发布</a>
-                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>快速回滚</a>
+                    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="log"><i class="layui-icon layui-icon-date"></i>日志</a>
+                    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="rollback"><i class="layui-icon layui-icon-refresh-3"></i>回滚</a>
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="release"><i class="layui-icon layui-icon-release"></i>发布</a>
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="quick"><i class="layui-icon layui-icon-log"></i>快速回滚</a>
                 </script>
                 <input class="layui-hide" name="_token" value="{{csrf_token()}}" id="token">
             </div>
@@ -89,7 +89,7 @@
                     layer.open({
                         type: 2
                         , title: '添加应用'
-                        , content: '{{url('application/addform')}}'
+                        , content: '{{url('publish/allrelease')}}'
                         , area: ['500px', '420px']
                         , btn: ['确定', '取消']
                         , yes: function (index, layero) {

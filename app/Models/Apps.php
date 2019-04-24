@@ -27,7 +27,7 @@ class Apps extends Model
         return false;
     }
 
-    public static function getDatas($option = [],$select='*')
+    public static function getDatas($option = [],$select='*',$node=false)
     {
         $items = self::where($option)->select($select)->get();
         $data = array('code'=>0,'msg'=>'','count'=>$items->count());
@@ -48,14 +48,14 @@ class Apps extends Model
                 'pid' => 0,
                 'number' => $number,
             );
-            if ($item->ipNode)
+            if ($item->ipNode && $node)
             {
                 foreach($item->ipNode as $v)
                 {
                     $data['data'][] = array(
                         'name' => $item->name,
                         'domain_name' => $item->domain_name,
-                        'id' => $v->id+10000,
+                        'id' => $item->id.'-'.$v->id,
                         'ip' => $v->ip,
                         'pid' => $v->apps_id,
                         'remark' => $v->remark,
