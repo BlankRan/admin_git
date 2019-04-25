@@ -39,7 +39,7 @@ class ApplicationPublishController extends Controller
         $str = "#!/bin/sh\n";
         $location = "cd /data/test/admin_git/\n";
         $gitConfig = "git config --global user.email 'a@a.com'\ngit config --global user.name 'aaaa'";
-        $shell = "git pull\n";
+        $shell = "git pull 2>&1\n";
 //        $shell.="echo 1";
         $shells = $str.$location.$shell.$gitConfig;
         file_put_contents($text,$shells);
