@@ -63,7 +63,7 @@ layui.define(['table', 'form','treeGrid'], function(exports){
                         });
                     }
                 });
-                layer.close(index);
+                layer.closeAll();
         } else if (obj.event === 'rollback') {
             $.post('/publish/rollback', {id: data.id, _token: $('#token').val()}, function (data) {
                 if (data.code == 200) {
@@ -76,7 +76,7 @@ layui.define(['table', 'form','treeGrid'], function(exports){
                     });
                 }
             });
-            layer.close(index);
+            layer.closeAll();
         }else if (obj.event === 'release') {
             $.post('/publish/release', {id: data.id, _token: $('#token').val()}, function (data) {
                 if (data.code == 200) {
@@ -89,7 +89,7 @@ layui.define(['table', 'form','treeGrid'], function(exports){
                     });
                 }
             });
-            layer.close(index);
+            layer.closeAll();
         }else if (obj.event === 'quick') {
             $.post('/publish/quick', {id: data.id, _token: $('#token').val()}, function (data) {
                 if (data.code == 200) {
@@ -102,7 +102,7 @@ layui.define(['table', 'form','treeGrid'], function(exports){
                     });
                 }
             });
-            layer.close(index);
+            layer.closeAll();
         }
     });
 
