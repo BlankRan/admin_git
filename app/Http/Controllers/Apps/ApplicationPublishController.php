@@ -7,6 +7,7 @@ use App\Models\Apps;
 use App\Models\IpNode;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\App;
 
 class ApplicationPublishController extends Controller
 {
@@ -37,6 +38,7 @@ class ApplicationPublishController extends Controller
     public function release(){
         $text = 'temp.sh';
         $str = "#!/bin/sh\n";
+        $app = Apps::getData($this->params['id']);
         $location = "cd /data/test/admin_git/\n";
         $gitConfig = "git config --global user.email 'a@a.com'\ngit config --global user.name 'aaaa'";
         $shell = "git pull\n";
@@ -44,6 +46,10 @@ class ApplicationPublishController extends Controller
         $shells = $str.$location.$shell.$gitConfig;
         file_put_contents($text,$shells);
         exec("sh ".$text, $result, $status);
+        if ($status == 0 )
+        {
+
+        }
         print_r($result);
         print_r($status);
         //123456

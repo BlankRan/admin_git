@@ -121,7 +121,7 @@
                     $('#init').val('-1');
                 }
             });
-            form.on('switch(init)', function(data){
+            form.on('switch(composer)', function(data){
                 if (data.elem.checked) {
                     $('#composer').val('1');
                 }else {
