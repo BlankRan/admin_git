@@ -37,7 +37,7 @@ class ApplicationPublishController extends Controller
     public function release(){
         $text = 'temp.sh';
         $str = "#!/bin/sh\n";
-        $location = "cd /data/deploy/admin_git/\n";
+        $location = "cd /data/test/admin_git/\n";
         $shell = "git pull 2>&1\n";
 //        $shell.="echo 1";
         $shells = $str.$location.$shell;
