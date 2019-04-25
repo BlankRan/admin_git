@@ -45,6 +45,7 @@ class ApplicationPublishController extends Controller
         exec("sh ".$text, $result, $status);
         print_r($result);
         print_r($status);
+        //1
 
     }
     public function quick(){
