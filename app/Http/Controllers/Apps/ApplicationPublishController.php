@@ -37,7 +37,7 @@ class ApplicationPublishController extends Controller
     public function release(){
         $text = 'temp.sh';
         $str = "#!/bin/sh\n";
-        $location = "cd /data/deploy/admin_git/\n";
+        $location = "cd /data/test/admin_git/\n";
         $gitConfig = "git config --global user.email 'a@a.com'\ngit config --global user.name 'aaaa'";
         $shell = "git pull\n";
 //        $shell.="echo 1";
