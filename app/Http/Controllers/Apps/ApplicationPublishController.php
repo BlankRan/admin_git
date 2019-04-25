@@ -46,7 +46,7 @@ class ApplicationPublishController extends Controller
         exec("sh ".$text, $result, $status);
         print_r($result);
         print_r($status);
-        //123
+        //1234
 
     }
     public function quick(){
