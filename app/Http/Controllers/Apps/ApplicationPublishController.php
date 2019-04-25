@@ -41,8 +41,8 @@ class ApplicationPublishController extends Controller
         $shell = "git pull\n";
         $shell.="echo 1";
         $shells = $str.$location.$shell;
-        file_put_contents("sh ".$text,$shells);
-        exec($text, $result, $status);
+        file_put_contents($text,$shells);
+        exec("sh ".$text, $result, $status);
         print_r($result);
         print_r($status);
 
