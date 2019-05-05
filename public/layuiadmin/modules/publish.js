@@ -91,20 +91,26 @@ layui.define(['table', 'form','treeGrid'], function(exports){
             });
             layer.closeAll();
         }else if (obj.event === 'quick') {
-            $.post('/publish/quick', {id: data.id, _token: $('#token').val()}, function (data) {
-                if (data.code == 200) {
-                    layer.msg(data.msg, {
-                        icon: 1
-                    });
-                } else {
-                    layer.msg(data.msg, {
-                        icon: 2
-                    });
-                }
+            layer.prompt({
+                formType: 1
+                ,title: '请输入要回退的版本号'
+            }, function(value, index){
+                layer.close(index);
+                $.post('/publish/quick', {id: data.id, _token: $('#token').val(),commit_id:value}, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1
+                        });
+                    } else {
+                        layer.msg(data.msg, {
+                            icon: 2
+                        });
+                    }
+                });
+                layer.closeAll();
             });
-            layer.closeAll();
+
         }
     });
-
     exports('publish', {});
 });

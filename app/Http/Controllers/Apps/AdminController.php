@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Apps;
 
+use App\Http\Controllers\Controller;
 use App\Models\Admin;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Session;
 
 class AdminController extends Controller
 {
@@ -67,5 +68,13 @@ class AdminController extends Controller
             $this->showCodeMassage(200,'');
         }
     }
-
+    public function index()
+    {
+        $id = Session::get('session_id');
+        print_r($id);
+        if ($id){
+            $item = Admin::find($id);
+            return view('index')->with('item',$item);
+        }
+    }
 }

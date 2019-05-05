@@ -13,6 +13,12 @@ layui.define('form', function(exports){
             if (!value || value == '0'){
                 return item.placeholder;
             }
+        },
+        tips:function (value,item) {
+            if (!value || value.length == 0)
+            {
+                return '请输入'+item.placeholder;
+            }
         }
     });
     exports('publictools', {});

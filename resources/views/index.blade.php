@@ -41,18 +41,20 @@
               <i class="layui-icon layui-icon-theme"></i>
             </a>
           </li>
+          <!--
           <li class="layui-nav-item layui-hide-xs" lay-unselect>
             <a href="javascript:;" layadmin-event="fullscreezn">
               <i class="layui-icon layui-icon-screen-full"></i>
             </a>
           </li>
+          -->
           <li class="layui-nav-item" lay-unselect>
             <a href="javascript:;">
-              <cite>贤心</cite>
+              <cite>{{$item->username ?? ''}}</cite>
             </a>
             <dl class="layui-nav-child">
-              <dd><a lay-href="set/user/info.html">基本资料</a></dd>
-              <dd><a lay-href="set/user/password.html">修改密码</a></dd>
+              {{--<dd><a lay-href="set/user/info.html">基本资料</a></dd>--}}
+              {{--<dd><a lay-href="set/user/password.html">修改密码</a></dd>--}}
               <hr>
               <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
             </dl>
