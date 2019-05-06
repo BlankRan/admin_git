@@ -57,7 +57,7 @@ class Apps extends Model
                         'domain_name' => $item->domain_name,
                         'id' => $item->id.'-'.$v->id,
                         'ip' => $v->ip,
-                        'pid' => $v->apps_id,
+                        'pid' => intval($v->apps_id),
                         'remark' => $v->remark,
                     );
                 }
