@@ -71,7 +71,6 @@ class AdminController extends Controller
     public function index()
     {
         $id = Session::get('session_id');
-        print_r($id);
         if ($id){
             $item = Admin::find($id);
             return view('index')->with('item',$item);
